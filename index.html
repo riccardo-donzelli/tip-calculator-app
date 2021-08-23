@@ -11,33 +11,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h2>S P L I<br>T T E R</h2>
-  <div class="calculator">
+  <h2 role="text">S P L I<br>T T E R</h2>
+  <div class="calculator" role="main">
     <div id="inputs">
-      <h5>Bill</h5>
-      <input type="number" id="bill-input" value="0.00" name="bill-input">
-      <h5>Select Tip %</h5>
+      <h5 role="text">Bill</h5>
+      <input type="number" id="bill-input" value="0.00" name="bill-input" aria-label="bill" role="form">
+      <h5 role="text">Select Tip %</h5>
       <div id="buttons">
-        <button id="five" class="tip-button" data-button value="5">5%</button>
-        <button id="ten" class="tip-button" data-button value="10">10%</button>
-        <button id="fifteen" class="tip-button" data-button value="15">15%</button>
-        <button id="twentyfive" class="tip-button" data-button value="25">25%</button>
-        <button id="fifty" class="tip-button" data-button value="50">50%</button>
+        <button id="five" class="tip-button" data-button value="5" role="button">5%</button>
+        <button id="ten" class="tip-button" data-button value="10" role="button">10%</button>
+        <button id="fifteen" class="tip-button" data-button value="15" role="button">15%</button>
+        <button id="twentyfive" class="tip-button" data-button value="25" role="button">25%</button>
+        <button id="fifty" class="tip-button" data-button value="50" role="button">50%</button>
         <input type="number" name="custom" id="custom" class="tip-button" placeholder="Custom" min="0" max="99"></input>
       </div>
-      <h5>Number of People</h5><h5 id="warning">Can't be zero</h5>
-      <input type="number" id="people" name="people" value="0">
+      <h5 role="text">Number of People</h5><h5 id="warning">Can't be zero</h5>
+      <input type="number" id="people" name="people" value="0" aria-label="people" role="form">
     </div>
       <div id="totals">
         <div class="row1">
-          <h5>Tip Amount<br><span>/ person</span></h5>
+          <h5 role="text">Tip Amount<br><span>/ person</span></h5>
           <div class="total" id="tip-amount">$0,00</div>
         </div>
         <div class="row2">
-          <h5>Total<br><span>/ person</span></h5>
+          <h5 role="text">Total<br><span>/ person</span></h5>
           <div class="total" id="total-person">$0,00</div> 
         </div>
-        <button id="reset">RESET</button>
+        <button id="reset" role="button">RESET</button>
       </div>
   </div>
   <div class="attribution">
