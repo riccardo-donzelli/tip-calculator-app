@@ -58,6 +58,7 @@ function customTip() {
 function reset() {
     billInput.value = "0.00";
     peopleAmount.value = 0;
+    custom.value = "Custom";
     total.innerText = "$0,00";
     tipAmount.innerText = "$0,00";
     warningMessage.style.display = "none";
