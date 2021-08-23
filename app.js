@@ -12,6 +12,7 @@ const listOfButtons = document.querySelector("#buttons");
 function focusInputData(e) {
     if (e.target.value == 0.00 || e.target.value == 0) {
         e.target.value = "";
+        return;
     }
 }
 
@@ -19,6 +20,7 @@ function peopleAmountData(e) {
     if (e.target.value == 0 || e.target.value == "") {
         warningMessage.style.display = "block";
         peopleAmount.style.border = "2px solid red";
+        return;
     } else {
         warningMessage.style.display = "none";
         peopleAmount.style.border = "none";
@@ -37,10 +39,10 @@ function calculateTip(e) {
         warningMessage.style.display = "block";
         peopleAmount.style.border = "2px solid red";
         return;
+    } else {
+        total.innerText = "$" + Number(totalResult).toPrecision(2);
+        tipAmount.innerText = "$" + Number(singleResult).toPrecision(2);
     }
-    
-    total.innerText = "$" + Number(totalResult).toPrecision(2);
-    tipAmount.innerText = "$" + Number(singleResult).toPrecision(2);
 }
 
 function customTip() {
