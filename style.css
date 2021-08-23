@@ -1,0 +1,220 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    --dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-grayish-cyan-2: hsl(189, 41%, 97%);
+    --green-cyan: hsl(172, 67%, 46%);
+}
+
+body {
+    background-color: var(--light-grayish-cyan);
+}
+
+h2 {
+    text-align: center;
+    color: var(--dark-cyan);
+    margin: 2rem auto;
+}
+
+.calculator {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input:not(#custom) {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    color: var(--dark-cyan);
+    padding: 0 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#bill-input {
+    background: url(./images/icon-dollar.svg) no-repeat 15px 50%;
+    background-color: var(--light-grayish-cyan-2);
+}
+
+#bill-input:focus, #people:focus {
+    border: 2px solid green;
+}
+
+#people {
+    background: url(./images/icon-person.svg) no-repeat 15px 50%;
+    background-color: var(--light-grayish-cyan-2);
+}
+
+h5 {
+    color:var(--dark-grayish-cyan);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 15px;
+    grid-column-gap: 5px;
+}
+
+.tip-button {
+    border: none;
+    width: 6em;
+    height: 2em;
+    border-radius: 5px;
+    background-color: var(--dark-cyan);
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tip-button:active, #reset:active {
+    background-color: hsl(172, 66%, 66%);
+}
+
+#custom {
+    background-color: var(--light-grayish-cyan-2);
+    color: var(--dark-grayish-cyan);
+    border: none;
+    width: 6em;
+    height: 2em;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-cyan);
+}
+
+#custom:focus {
+    border: 2px solid green;
+}
+
+#warning {
+    display: none;
+    color: red;
+}
+
+#totals {
+    background-color: var(--dark-cyan);
+    margin-top: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.row1, .row2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#totals h5 {
+    color: white;
+    margin: 0.7rem 0;
+}
+
+#totals span {
+    color: var(--dark-grayish-cyan);
+    font-size: 0.8rem;
+}
+
+.total {
+    color: var(--green-cyan);
+    font-size: 26px;
+    font-weight: 700;
+    text-align: right;
+}
+
+#reset {
+    width: 100%;
+    height: 50px;
+    background-color: var(--green-cyan);
+    color: var(--dark-cyan);
+    font-weight: 700;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* MEDIA QUERIES */
+@media all and (min-width: 780px) {
+    
+    .calculator {
+        width: 50%;
+        height: 50%;
+        margin: 4rem auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    input:not(#custom) {
+        width: 90%;
+    }
+
+    h5 {
+        margin-top: 2rem;
+    }
+
+    #buttons {
+        width: 50%;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    }
+
+    .tip-button, #custom {
+        width: 4.5em;
+        font-size: 20px;
+    }
+
+    #totals {
+        width: 100%;
+    }
+
+    #reset {
+        height: 40px;
+        margin-top: 6rem;
+    }
+}

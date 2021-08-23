@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h2>S P L I<br>T T E R</h2>
+  <div class="calculator">
+    <div id="inputs">
+      <h5>Bill</h5>
+      <input type="number" id="bill-input" value="0.00" name="bill-input">
+      <h5>Select Tip %</h5>
+      <div id="buttons">
+        <button id="five" class="tip-button" data-button value="5">5%</button>
+        <button id="ten" class="tip-button" data-button value="10">10%</button>
+        <button id="fifteen" class="tip-button" data-button value="15">15%</button>
+        <button id="twentyfive" class="tip-button" data-button value="25">25%</button>
+        <button id="fifty" class="tip-button" data-button value="50">50%</button>
+        <input type="number" name="custom" id="custom" class="tip-button" placeholder="Custom" min="0" max="99"></input>
+      </div>
+      <h5>Number of People</h5><h5 id="warning">Can't be zero</h5>
+      <input type="number" id="people" name="people" value="0">
+    </div>
+      <div id="totals">
+        <div class="row1">
+          <h5>Tip Amount<br><span>/ person</span></h5>
+          <div class="total" id="tip-amount">$0,00</div>
+        </div>
+        <div class="row2">
+          <h5>Total<br><span>/ person</span></h5>
+          <div class="total" id="total-person">$0,00</div> 
+        </div>
+        <button id="reset">RESET</button>
+      </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/riccardo-donzelli">Riccardo Donzelli</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
