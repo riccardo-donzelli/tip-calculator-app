@@ -32,6 +32,13 @@ function calculateTip(e) {
     const numberOfPeople = peopleAmount.value;
     const totalResult = tip / 100 * billInputValue;
     const singleResult = totalResult / numberOfPeople;
+    
+    if (numberOfPeople == 0) {
+        warningMessage.style.display = "block";
+        peopleAmount.style.border = "2px solid red";
+        return;
+    }
+    
     total.innerText = "$" + Number(totalResult).toPrecision(2);
     tipAmount.innerText = "$" + Number(singleResult).toPrecision(2);
 }
@@ -51,6 +58,8 @@ function reset() {
     peopleAmount.value = 0;
     total.innerText = "$0,00";
     tipAmount.innerText = "$0,00";
+    warningMessage.style.display = "none";
+    peopleAmount.style.border = "none";
 }
 
 // EVENT LISTENERS
